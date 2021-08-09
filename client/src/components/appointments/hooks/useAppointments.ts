@@ -83,6 +83,9 @@ export function useAppointments(): UseAppointments {
     queryClient.prefetchQuery(
       [queryKeys.appointments, nextMonthYear.year, nextMonthYear.month],
       () => getAppointments(nextMonthYear.year, nextMonthYear.month),
+      {
+        select: showAll ? undefined : selectFn,
+      },
     );
   }, [queryClient, monthYear]);
 
