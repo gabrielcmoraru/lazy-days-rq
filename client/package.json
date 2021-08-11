@@ -67,5 +67,8 @@
   },
   "jest": {
     "resetMocks": false
+  },
+  "devDependencies": {
+    "msw": "^0.34.0"
   }
 }
